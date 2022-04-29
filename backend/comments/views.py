@@ -1,6 +1,3 @@
-from functools import partial
-from urllib import request
-from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticatedOrReadOnly
@@ -26,11 +23,11 @@ def get_all_comments(request, video_id):
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def add_comment():
+def add_comment(request):
     if request.method == 'POST':
         serializer = CommentSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 @api_view(['PUT'])
