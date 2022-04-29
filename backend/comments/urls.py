@@ -3,6 +3,7 @@ from comments import views
 
 urlpatterns = [
     path('', {...}), # POST
-    path('<int:video_id>/', {...})  #GET, PUT
+    path('video/<int:video_id>/', {...}),  #GET
+    path(',int:comment_id',) #PUT
     
 ]
