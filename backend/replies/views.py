@@ -20,6 +20,7 @@ def reply_list(request):
 
     if request.method == 'POST':
         serializer = ReplySerializer(data=request.data, partial=True)
+        comment_id = int(comment_id)
         if serializer.is_valid():
             serializer.save(comment=comment_instance, user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
