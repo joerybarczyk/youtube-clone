@@ -22,11 +22,7 @@ def reply_list(request):
         serializer = ReplySerializer(data=request.data, partial=True)
         comment_id = int(comment_id)
         if serializer.is_valid():
-<<<<<<< HEAD
-            serializer.save(user=request.user, comment = comment_id)
-=======
             serializer.save(comment=comment_instance, user=request.user)
->>>>>>> 40faa4be93ed29ff860419ac06b65567ebad3eb8
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
