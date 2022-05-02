@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePageRef/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import HomePageYouTube from "./pages/HomePageYouTube/HomePageYouTube";
+import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -20,14 +21,8 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-              <HomePageYouTube />
-            
-          }
-        />
-        
+        <Route path="/" element={<HomePageYouTube />} />
+        <Route path="/search" element={<SearchResultsPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
