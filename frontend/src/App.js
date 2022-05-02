@@ -3,9 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages Imports
-import HomePage from "./pages/HomePage/HomePage";
+import HomePage from "./pages/HomePageRef/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import HomePageYouTube from "./pages/HomePageYouTube/HomePageYouTube";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -22,11 +23,11 @@ function App() {
         <Route
           path="/"
           element={
-            <PrivateRoute>
-              <HomePage />
-            </PrivateRoute>
+              <HomePageYouTube />
+            
           }
         />
+        
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
