@@ -7,11 +7,12 @@ import axios from "axios";
 
 const HomePageYouTube = () => {
   const searchResults = useVideoSearchResults("kittens");
+  console.log('searchResults on homepage');
   console.log(searchResults);
   return (
     <div>
       <p> Hello World!!!</p>
-      <p>{searchResults[0]}.snippet.channelTitle</p>
+      {/* <p>{searchResults[0].snippet.channelTitle}</p> */}
     </div>
   );
 };

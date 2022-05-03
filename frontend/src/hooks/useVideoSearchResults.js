@@ -14,8 +14,9 @@ const useVideoSearchResults = function (query) {
     let response = await axios.get(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
     );
-    console.log(response.data.items);
+    
     setSearchResults(response.data.items);
+  
   }
 
   return searchResults;
