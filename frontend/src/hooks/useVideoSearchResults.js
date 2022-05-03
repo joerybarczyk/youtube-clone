@@ -14,7 +14,24 @@ const useVideoSearchResults = function (query) {
     let response = await axios.get(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
     );
-    setSearchResults(response.data.items);
+
+    const formattedResponse = formatRawResults(response.data.items);
+    setSearchResults(formattedResponse);
+  }
+
+  function formatRawResults(rawResults) {
+    const formattedResults = rawResults.map((vidObj) => {
+      const formattedVidObj = {
+        videoId: vidObj.id.videoId,
+        channelTitle: vidObj.snippet.channelTitle,
+        description: vidObj.snippet.description,
+        publishTime: vidObj.snippet.publishTime,
+        thumbnail: vidObj.snippet.thumbnails.medium,
+        title: vidObj.snippet.title,
+      };
+      return formattedVidObj;
+    });
+    return formattedResults;
   }
 
   return [searchResults];
