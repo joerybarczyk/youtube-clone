@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {KEY} from "../localKey.js";
 
 const useVideoSearchResults = function (query) {
   const [searchResults, setSearchResults] = useState(null);
-  const apiKey = "hi mom";
+  const apiKey = KEY;
 
   useEffect(() => {
     getSearchResults();
@@ -11,10 +12,10 @@ const useVideoSearchResults = function (query) {
 
   async function getSearchResults() {
     let response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?q=${query}&key=${apiKey}`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
     );
-    console.log(response.data);
-    setSearchResults(response.data);
+    console.log(response.data.items);
+    setSearchResults(response.data.items);
   }
 
   return searchResults;
