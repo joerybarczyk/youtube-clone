@@ -4,11 +4,14 @@ import useAuth from "../../hooks/useAuth";
 import useVideoSearchResults from "../../hooks/useVideoSearchResults";
 import axios from "axios";
 
-
 const HomePageYouTube = () => {
-  const searchResults = useVideoSearchResults("kittens");
-  console.log('searchResults on homepage');
-  console.log(searchResults);
+  const [searchResults] = useVideoSearchResults("kittens");
+
+  if (searchResults) {
+    console.log("results from useVideoSearchResults");
+    console.log(searchResults);
+  }
+
   return (
     <div>
       <p> Hello World!!!</p>
