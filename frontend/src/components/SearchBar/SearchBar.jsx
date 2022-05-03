@@ -7,7 +7,7 @@ const SearchBar = () => {
 
   const handleSubmit = function (event) {
     event.preventDefault();
-    navigate(`/search?searchValue=${searchValue}`);
+    navigate(`/results?search_query=${searchValue}`);
     // <Navigate to={`/search?searchValue=${searchValue}`} />;
   };
 

@@ -3,6 +3,7 @@ import axios from "axios";
 
 const useVideoSearchResults = function (query) {
   const [searchResults, setSearchResults] = useState(null);
+  const apiKey = "hi mom";
 
   useEffect(() => {
     getSearchResults();

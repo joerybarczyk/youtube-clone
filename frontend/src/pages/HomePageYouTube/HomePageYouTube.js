@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import useVideoSearchResults from "../../hooks/useVideo";
+import useVideoSearchResults from "../../hooks/useVideoSearchResults";
 import axios from "axios";
 
 const HomePageYouTube = () => {
