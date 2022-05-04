@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentCard from "../CommentCard/CommentCard";
+import AddComment from "../AddComment/AddComment"
 
 const CommentSection = (props) => {
   const [comments, setComments] = useState(null);
@@ -27,6 +28,7 @@ const CommentSection = (props) => {
 
   return (
     <div>
+      <AddComment videoId={props.videoId}/>
       <h3>Comments</h3>
       {comments && comments.length !== 0 ? (
         <tbody>
