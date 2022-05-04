@@ -32,7 +32,6 @@ const useRelatedVideos = function (videoId) {
         };
         return formattedVidObj;
       });
-    console.log(formattedResults);
     return formattedResults;
   }
 

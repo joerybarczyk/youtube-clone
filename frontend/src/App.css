@@ -13,10 +13,6 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-p {
-  font-size: 20px;
-}
-
 button {
   background-color: transparent;
   border: 2px solid steelblue;
@@ -31,13 +27,6 @@ button:hover {
   cursor: pointer;
   color: white;
   background-color: steelblue;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 600px;
-  overflow: auto;
-  text-align: center;
 }
 
 .form {

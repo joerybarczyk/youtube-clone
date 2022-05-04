@@ -26,7 +26,7 @@ function IndividualVideoPage(props) {
               <VideoDetails videoDetails={videoDetails} />
             </Row>
             <Row>
-              <CommentSection videoId ={videoId}/>
+              <CommentSection videoId={videoId} />
             </Row>
           </Col>
           <Col md={3}>
