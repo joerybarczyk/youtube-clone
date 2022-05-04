@@ -3,11 +3,10 @@ import useVideoSearchResults from "../../hooks/useVideoSearchResults";
 import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
 
 const HomePageYouTube = () => {
-  const [searchResults] = useVideoSearchResults("kittens");
+  const [searchResults] = useVideoSearchResults("dogs");
 
   return (
     <div>
-      <p> Hello World!!!</p>
       {searchResults != null && (
         <tbody>
           {searchResults.map((video) => {
