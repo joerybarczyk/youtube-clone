@@ -12,32 +12,13 @@ const HomeVideoCard = (props) => {
     navigate(`/watch?v=${props.video.videoId}`);
   };
   return (
-    <Card>
+    <Card onClick={handleClick}>
       <Card.Img variant="top" src={props.video.thumbnail.url}/>
       <Card.Title>{props.video.title}</Card.Title>
-      <Card.Text>{props.video.channelName}</Card.Text>
-      <Card.Text>{props.video.date}</Card.Text>
+      <Card.Text>{props.video.channelTitle}</Card.Text>
+      <Card.Text>{props.video.publishTime}</Card.Text>
 
     </Card>
-
-    
-
-
-
-
-
-    // <div onClick={handleClick}>
-    //   <img
-    //     class="card-img-top"
-    //     src={props.video.thumbnail.url}
-    //     alt="Thumbnail URL"
-    //   />
-    //   <div class="card-body">
-    //     <h5 class="card-title">{props.video.title}</h5>
-    //     <h6 class="card-text">{props.video.channelName}</h6>
-    //     <p>{props.video.date}</p>
-    //   </div>
-    // </div>
   );
 };
 

@@ -16,7 +16,7 @@ function SearchResultsPage(props) {
           {searchResults.map((video) => {
             return (
               <td>
-                <HomeVideoCard video={video} />
+                <HomeVideoCard key='0' video={video} />
               </td>
             );
           })}
