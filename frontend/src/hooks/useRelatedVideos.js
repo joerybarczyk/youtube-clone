@@ -6,16 +6,15 @@ const useRelatedVideos = function (videoId) {
   const [relatedVideos, setRelatedVideos] = useState(null);
 
   useEffect(() => {
+    async function getRelatedVideos() {
+      let response = await axios.get(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${KEY}`
+      );
+      const formattedResponse = formatRawResults(response.data.items);
+      setRelatedVideos(formattedResponse);
+    }
     getRelatedVideos();
   }, [videoId]);
-
-  async function getRelatedVideos() {
-    let response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${KEY}`
-    );
-    const formattedResponse = formatRawResults(response.data.items);
-    setRelatedVideos(formattedResponse);
-  }
 
   function formatRawResults(rawResults) {
     const formattedResults = rawResults

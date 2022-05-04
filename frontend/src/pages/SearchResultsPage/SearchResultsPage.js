@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSearchParams } from "react-router-dom";
 import useVideoSearchResults from "../../hooks/useVideoSearchResults";
 import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
@@ -13,10 +13,10 @@ function SearchResultsPage(props) {
       <h1>Search Results Page</h1>
       {searchResults != null && (
         <tbody>
-          {searchResults.map((video) => {
+          {searchResults.map((video, index) => {
             return (
               <td>
-                <HomeVideoCard key='0' video={video} />
+                <HomeVideoCard key={index} video={video} />
               </td>
             );
           })}

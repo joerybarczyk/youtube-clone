@@ -7,17 +7,17 @@ const useVideoSearchResults = function (query) {
   const apiKey = KEY;
 
   useEffect(() => {
+    async function getSearchResults() {
+      let response = await axios.get(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
+      );
+
+      const formattedResponse = formatRawResults(response.data.items);
+      setSearchResults(formattedResponse);
+    }
+
     getSearchResults();
-  }, [query]);
-
-  async function getSearchResults() {
-    let response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
-    );
-
-    const formattedResponse = formatRawResults(response.data.items);
-    setSearchResults(formattedResponse);
-  }
+  }, [query, apiKey]);
 
   function formatRawResults(rawResults) {
     const formattedResults = rawResults.map((vidObj) => {

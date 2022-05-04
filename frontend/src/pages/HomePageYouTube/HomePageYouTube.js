@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import useAuth from "../../hooks/useAuth";
 import useVideoSearchResults from "../../hooks/useVideoSearchResults";
 import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
 
@@ -15,7 +13,7 @@ const HomePageYouTube = () => {
           {searchResults.map((video) => {
             return (
               <td>
-                <HomeVideoCard key='0' video={video} />
+                <HomeVideoCard key="0" video={video} />
               </td>
             );
           })}
