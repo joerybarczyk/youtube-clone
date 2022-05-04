@@ -1,7 +1,10 @@
 import React from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import useRelatedVideos from "../../hooks/useRelatedVideos";
-import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
+import Video from "../../components/Video/Video";
+import VideoDetails from "../../components/VideoDetails/VideoDetails";
+import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
+import { Row, Col, Container } from "react-bootstrap";
 
 function IndividualVideoPage(props) {
   const [searchParams] = useSearchParams();
@@ -12,28 +15,21 @@ function IndividualVideoPage(props) {
 
   return (
     <div>
-      <h1>Individual Video Page</h1>
-      <h3>Video Id: {videoId}</h3>
-      <iframe
-        title="Youtube video"
-        id="ytplayer"
-        type="text/html"
-        width="640"
-        height="360"
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-        frameborder="0"
-      />
-      {relatedVideos != null && (
-        <tbody>
-          {relatedVideos.map((video) => {
-            return (
-              <td>
-                <HomeVideoCard video={video} />
-              </td>
-            );
-          })}
-        </tbody>
-      )}
+      <Container>
+        <Row>
+          <Col md={9}>
+            <Row>
+              <Video videoId={videoId} />
+            </Row>
+            <Row>
+              <VideoDetails videoDetails={videoDetails} />
+            </Row>
+          </Col>
+          <Col md={3}>
+            <RelatedVideos relatedVideos={relatedVideos} />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
