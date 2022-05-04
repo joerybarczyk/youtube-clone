@@ -5,6 +5,7 @@ import Video from "../../components/Video/Video";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
 import { Row, Col, Container } from "react-bootstrap";
+import CommentSection from "../../components/CommentSection/CommentSection";
 
 function IndividualVideoPage(props) {
   const [searchParams] = useSearchParams();
@@ -23,6 +24,9 @@ function IndividualVideoPage(props) {
             </Row>
             <Row>
               <VideoDetails videoDetails={videoDetails} />
+            </Row>
+            <Row>
+              <CommentSection videoId ={videoId}/>
             </Row>
           </Col>
           <Col md={3}>

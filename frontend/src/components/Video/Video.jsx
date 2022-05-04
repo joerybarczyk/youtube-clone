@@ -10,7 +10,7 @@ const Video = (props) => {
         width="640"
         height="360"
         src={`https://www.youtube.com/embed/${props.videoId}?autoplay=0`}
-        frameborder="0"
+        frameBorder="0"
       />
     </>
   );
