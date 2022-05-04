@@ -9,9 +9,11 @@ const HomeVideoCard = (props) => {
     event.preventDefault();
     navigate(`/watch?v=${props.video.videoId}`, { state: props.video });
   };
+
+  console.log(props.video)
   return (
     <Card onClick={handleClick}>
-      <Card.Img variant="top" src={props.video.thumbnail.url} />
+      <Card.Img className="card-img" variant="top" src={props.video.thumbnail.url} />
       <Card.Title>{props.video.title}</Card.Title>
       <Card.Text>{props.video.channelTitle}</Card.Text>
       <Card.Text>{props.video.publishTime}</Card.Text>
