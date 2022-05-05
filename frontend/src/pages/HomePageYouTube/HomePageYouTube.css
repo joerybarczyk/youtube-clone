@@ -1,0 +1,10 @@
+.home-flex{
+    display: flex;
+    justify-content: center;
+}
+.homepage{
+    color: white;
+}
+.custom-header{
+    margin-left: 250px;
+}
