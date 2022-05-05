@@ -12,7 +12,7 @@ const HomePageYouTube = () => {
           {searchResults.map((video) => {
             return (
               <td>
-                <HomeVideoCard key="0" video={video} />
+                <HomeVideoCard key={video.id} video={video} />
               </td>
             );
           })}

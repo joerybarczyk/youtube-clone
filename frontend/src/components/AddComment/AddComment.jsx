@@ -9,20 +9,22 @@ const AddComment = (props) => {
   const navigate = useNavigate();
 
   async function addComment() {
-    console.log("Token: " + token);
     let response = await axios
-      .post(`http://127.0.0.1:8000/api/comments/?video=${props.videoId}/`, {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-        data: {
+      .post(
+        `http://127.0.0.1:8000/api/comments/?video=${props.videoId}`,
+        {
           text: commentInput,
         },
-      })
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      )
       .catch((error) => {
         console.log(error);
       });
-
+    props.getAllComments();
     console.log(response.data);
   }
 
