@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Search from "react-bootstrap-icons/dist/icons/search";
+import "./SearchBar.css";
 
 const SearchBar = () => {
-  const [searchValue, setSearchValue] = useState("SEARCH");
+  const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = function (event) {
@@ -12,16 +14,19 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <>
+      <form className="searchbar" onSubmit={handleSubmit}>
         <input
+          className="searchbar__input"
           type="text"
-          value={searchValue}
+          placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
         ></input>
-        <button type="submit">Search</button>
+        <button type="submit">
+          <Search style={{ color: "white" }} />
+        </button>
       </form>
-    </div>
+    </>
   );
 };
 
