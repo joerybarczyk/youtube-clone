@@ -9,7 +9,7 @@ const useVideoSearchResults = function (query) {
   useEffect(() => {
     async function getSearchResults() {
       let response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${apiKey}&type=video`
       );
 
       const formattedResponse = formatRawResults(response.data.items);

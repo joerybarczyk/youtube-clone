@@ -1,5 +1,5 @@
 import React from "react";
-import HomeVideoCard from "../HomeVideoCard/HomeVideoCard";
+import ResultVideoCard from "../ResultVideoCard/ResultVideoCard";
 
 const RelatedVideos = (props) => {
   return (
@@ -9,7 +9,7 @@ const RelatedVideos = (props) => {
           {props.relatedVideos.map((video) => {
             return (
               <tr>
-                <HomeVideoCard video={video} />
+                <ResultVideoCard video={video} />
               </tr>
             );
           })}

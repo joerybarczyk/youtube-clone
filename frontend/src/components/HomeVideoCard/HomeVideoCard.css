@@ -1,21 +1,17 @@
-.custom-card{
-    width: 500;
-    height: 500;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: 0px;
-    color: white;
-
+.custom-card {
+  width: 500;
+  height: 500;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 0px;
+  color: white;
 }
-.custom-card-img-top{
-    width: 350;
-    height: 400;
-
+.custom-card-img-top {
+  width: 350;
+  height: 400;
 }
-.custom-card-title-h5{
-    width: 320px;
-
-
+.custom-card-title-h5 {
+  width: 320px;
 }

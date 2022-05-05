@@ -9,8 +9,10 @@ li {
 
 .navBar {
   background: #202020;
-  box-shadow: 4px 2px 5px gray;
   color: white;
+  border-style: solid;
+  border-color: #303030;
+  border-width: 1px;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;

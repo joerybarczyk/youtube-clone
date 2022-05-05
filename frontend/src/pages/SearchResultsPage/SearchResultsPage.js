@@ -1,7 +1,7 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import useVideoSearchResults from "../../hooks/useVideoSearchResults";
-import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
+import ResultVideoCard from "../../components/ResultVideoCard/ResultVideoCard";
 
 function SearchResultsPage(props) {
   const [searchParams] = useSearchParams();
@@ -10,17 +10,16 @@ function SearchResultsPage(props) {
 
   return (
     <div>
-      <h1>Search Results Page</h1>
       {searchResults != null && (
-        <tbody>
+        <div className="results">
           {searchResults.map((video, index) => {
             return (
-              <td>
-                <HomeVideoCard key={index} video={video} />
-              </td>
+              <>
+                <ResultVideoCard key={index} video={video} />
+              </>
             );
           })}
-        </tbody>
+        </div>
       )}
     </div>
   );

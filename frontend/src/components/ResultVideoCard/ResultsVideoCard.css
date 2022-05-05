@@ -1,0 +1,16 @@
+.resultvideocard {
+  margin: 12px;
+  width: auto;
+}
+
+.rvc__title {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.rvc__secondarytext {
+  margin: 0px;
+  color: #aaaaaa;
+  font-size: small;
+}
