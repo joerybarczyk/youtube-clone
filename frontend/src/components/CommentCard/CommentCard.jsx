@@ -2,6 +2,7 @@ import React from "react";
 import LikeButton from "../LikeButton/LikeButton";
 import DislikeButton from "../DislikeButton/DislikeButton";
 import "./CommentCard.css";
+import GetReplies from "../GetReplies/GetReplies";
 
 const CommentCard = (props) => {
   return (
@@ -22,6 +23,7 @@ const CommentCard = (props) => {
         comment={props.comment}
         getAllComments={props.getAllComments}
       />
+      <GetReplies commentId ={props.comment.id}/>
     </div>
   );
 };

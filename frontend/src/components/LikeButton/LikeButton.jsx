@@ -19,7 +19,7 @@ function LikeButton(props) {
           },
         }
       );
-      console.log(response);
+    
       props.getAllComments();
       setLiked(true);
     } else {
@@ -34,7 +34,7 @@ function LikeButton(props) {
           },
         }
       );
-      console.log(response);
+     
       props.getAllComments();
       setLiked(false);
     }

@@ -19,7 +19,7 @@ function DislikeButton(props) {
           },
         }
       );
-      console.log(response);
+      
       props.getAllComments();
       setDisliked(true);
     } else {
@@ -34,7 +34,7 @@ function DislikeButton(props) {
           },
         }
       );
-      console.log(response);
+      
       props.getAllComments();
       setDisliked(false);
     }
