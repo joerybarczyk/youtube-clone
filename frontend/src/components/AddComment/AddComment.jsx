@@ -25,7 +25,7 @@ const AddComment = (props) => {
         console.log(error);
       });
     props.getAllComments();
-    console.log(response.data);
+    setCommentInput("");
   }
 
   function handleSubmit(event) {
