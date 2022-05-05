@@ -26,7 +26,13 @@ const CommentSection = (props) => {
       {comments && comments.length !== 0 ? (
         <tbody>
           {comments.map((comment) => {
-            return <CommentCard key={comment.id} comment={comment} />;
+            return (
+              <CommentCard
+                key={comment.id}
+                comment={comment}
+                getAllComments={getAllComments}
+              />
+            );
           })}
         </tbody>
       ) : (
