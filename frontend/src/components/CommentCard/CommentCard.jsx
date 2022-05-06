@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import LikeButton from "../LikeButton/LikeButton";
 import DislikeButton from "../DislikeButton/DislikeButton";
-import "./CommentCard.css";
+import LikeDislike from "../LikeDislike/LikeDislike";
 import GetReplies from "../GetReplies/GetReplies";
 import AddReplyForm from "../AddReplyForm/AddReplyForm";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import "./CommentCard.css";
 
 const CommentCard = (props) => {
   const [user, token] = useAuth();
@@ -30,17 +31,11 @@ const CommentCard = (props) => {
   }
 
   return (
-    
     <div className="comment__body">
-      <p>{props.comment.user.first_name}.</p>
       <h4 className="comment__usrname">{props.comment.user.username}</h4>
       <p className="comment__text">{props.comment.text}</p>
       <div className="comment__footer">
-        <LikeButton
-          comment={props.comment}
-          getAllComments={props.getAllComments}
-        />
-        <DislikeButton
+        <LikeDislike
           comment={props.comment}
           getAllComments={props.getAllComments}
         />

@@ -33,3 +33,19 @@
   border-bottom-color: #303030;
   border-bottom-width: 1px;
 }
+
+.vd__showmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vd__showmoretext {
+  font-size: small;
+  font-weight: bold;
+  background-color: transparent;
+  color: #aaaaaa;
+  padding: 0;
+  height: 1.5rem;
+  border: none;
+}
