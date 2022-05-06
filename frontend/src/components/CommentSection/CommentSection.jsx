@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentCard from "../CommentCard/CommentCard";
 import AddComment from "../AddComment/AddComment";
-
+import "./CommentSection.css";
 
 const CommentSection = (props) => {
-  const [comments, setComments] = useState(null);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getAllComments();
@@ -21,8 +21,10 @@ const CommentSection = (props) => {
   }
 
   return (
-    <div>
-      <h3>Comments</h3>
+    <div className="commentsection">
+      <h3 className="cs__title">
+        {comments.length} {comments.length === 1 ? "comment" : "comments"}
+      </h3>
       <AddComment videoId={props.videoId} getAllComments={getAllComments} />
       {comments && comments.length !== 0 ? (
         <tbody>

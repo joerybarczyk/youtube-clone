@@ -1,0 +1,22 @@
+.relatedvideocard {
+  margin: 12px;
+  width: auto;
+}
+
+.relvc__title {
+  color: white;
+  margin: 0;
+  font-size: small;
+  font-weight: bold;
+}
+
+.relvc__secondarytext {
+  margin: 0px;
+  color: #aaaaaa;
+  font-size: small;
+}
+
+.relvc_thumbnail {
+  max-width: 170px;
+  height: auto;
+}

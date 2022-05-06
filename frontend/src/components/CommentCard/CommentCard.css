@@ -1,3 +1,21 @@
 .comment__body {
   width: 500px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.comment__usrname {
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+}
+
+.comment__text {
+  font-size: small;
+  color: white;
+}
+
+.comment__footer {
+  display: flex;
+  gap: 10px;
 }

@@ -31,20 +31,23 @@ const CommentCard = (props) => {
 
   return (
     <div className="comment__body">
-      <h4>{props.comment.user.username}</h4>
-      <p>{props.comment.text}</p>
-      <LikeButton
-        comment={props.comment}
-        getAllComments={props.getAllComments}
-      />
-      <DislikeButton
-        comment={props.comment}
-        getAllComments={props.getAllComments}
-      />
-      <AddReplyForm
-        commentId={props.comment.id}
-        getAllReplies={getAllReplies}
-      />
+      <h4 className="comment__usrname">{props.comment.user.username}</h4>
+      <p className="comment__text">{props.comment.text}</p>
+      <div className="comment__footer">
+        <LikeButton
+          comment={props.comment}
+          getAllComments={props.getAllComments}
+        />
+        <DislikeButton
+          comment={props.comment}
+          getAllComments={props.getAllComments}
+        />
+        <AddReplyForm
+          commentId={props.comment.id}
+          getAllReplies={getAllReplies}
+        />
+      </div>
+
       <GetReplies replies={replies} />
     </div>
   );

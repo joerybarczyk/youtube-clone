@@ -13,12 +13,6 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-button:hover {
-  cursor: pointer;
-  color: white;
-  background-color: steelblue;
-}
-
 .form {
   align-items: center;
   display: flex;

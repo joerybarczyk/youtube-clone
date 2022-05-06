@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { BsHandThumbsDown, BsHandThumbsDownFill } from "react-icons/bs";
+import "./DislikeButton.css";
 
 function DislikeButton(props) {
   const [disliked, setDisliked] = useState(false);
@@ -19,7 +21,7 @@ function DislikeButton(props) {
           },
         }
       );
-      
+
       props.getAllComments();
       setDisliked(true);
     } else {
@@ -34,7 +36,7 @@ function DislikeButton(props) {
           },
         }
       );
-      
+
       props.getAllComments();
       setDisliked(false);
     }
@@ -42,8 +44,14 @@ function DislikeButton(props) {
 
   return (
     <>
-      <button onClick={dislikeComment}>Dislike</button>
-      <p>{props.comment.dislikes}</p>
+      <div onClick={dislikeComment}>
+        {disliked ? (
+          <BsHandThumbsDownFill className="db__icon" />
+        ) : (
+          <BsHandThumbsDown className="db__icon" />
+        )}
+      </div>
+      <p className="db__text">{props.comment.dislikes}</p>
     </>
   );
 }

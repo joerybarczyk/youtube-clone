@@ -1,0 +1,35 @@
+.videodetails {
+  padding-top: 24px;
+}
+
+.vd__title {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+.vd__secondarytext {
+  color: #aaaaaa;
+  font-size: small;
+}
+
+.vd__channelname {
+  color: white;
+  font-size: small;
+  font-weight: bold;
+}
+
+.vd__description {
+  color: white;
+  font-size: small;
+}
+
+.vd__descriptionbox {
+  padding-top: 12px;
+  border-top-style: solid;
+  border-top-color: #303030;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #303030;
+  border-bottom-width: 1px;
+}

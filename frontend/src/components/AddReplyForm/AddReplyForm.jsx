@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./AddReplyForm.css";
 
 function AddReplyForm(props) {
   const [buttonToggled, setButtonToggled] = useState(false);
@@ -10,7 +11,7 @@ function AddReplyForm(props) {
   const [user, token] = useAuth();
 
   async function addReply() {
-    let response = await axios.post(
+    await axios.post(
       `http://127.0.0.1:8000/api/replies/?commentId=${props.commentId}`,
       {
         text: replyInput,
@@ -39,7 +40,9 @@ function AddReplyForm(props) {
 
   return (
     <>
-      <button onClick={handleClick}>Reply</button>
+      <button className="replybtn" onClick={handleClick}>
+        REPLY
+      </button>
       {buttonToggled && (
         <form onSubmit={handleSubmit}>
           <input type="text" onChange={(e) => setReplyInput(e.target.value)} />

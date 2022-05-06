@@ -9,7 +9,7 @@ const AddComment = (props) => {
   const navigate = useNavigate();
 
   async function addComment() {
-    let response = await axios
+    await axios
       .post(
         `http://127.0.0.1:8000/api/comments/?video=${props.videoId}`,
         {
@@ -38,10 +38,9 @@ const AddComment = (props) => {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <label>Search</label>
       <input
         type="text"
-        value={commentInput}
+        placeholder="Add a comment..."
         onChange={(event) => setCommentInput(event.target.value)}
       />
     </form>

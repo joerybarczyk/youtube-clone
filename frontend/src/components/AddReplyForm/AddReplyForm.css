@@ -1,0 +1,9 @@
+.replybtn {
+  font-size: small;
+  font-weight: bold;
+  background-color: transparent;
+  color: #aaaaaa;
+  padding: 0;
+  height: 1.5rem;
+  border: none;
+}

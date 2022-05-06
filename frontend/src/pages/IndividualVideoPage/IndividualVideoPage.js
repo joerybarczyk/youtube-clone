@@ -18,7 +18,7 @@ function IndividualVideoPage(props) {
     <div>
       <Container>
         <Row>
-          <Col md={9}>
+          <Col xl={7}>
             <Row>
               <Video videoId={videoId} />
             </Row>
@@ -29,7 +29,7 @@ function IndividualVideoPage(props) {
               <CommentSection videoId={videoId} />
             </Row>
           </Col>
-          <Col md={3}>
+          <Col xl={5}>
             <RelatedVideos relatedVideos={relatedVideos} />
           </Col>
         </Row>

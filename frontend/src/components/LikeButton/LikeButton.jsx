@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { BsHandThumbsUp, BsHandThumbsUpFill } from "react-icons/bs";
+import "./LikeButton.css";
 
 function LikeButton(props) {
   const [liked, setLiked] = useState(false);
@@ -19,7 +21,7 @@ function LikeButton(props) {
           },
         }
       );
-    
+
       props.getAllComments();
       setLiked(true);
     } else {
@@ -34,7 +36,7 @@ function LikeButton(props) {
           },
         }
       );
-     
+
       props.getAllComments();
       setLiked(false);
     }
@@ -42,8 +44,14 @@ function LikeButton(props) {
 
   return (
     <>
-      <button onClick={likeComment}>Like</button>
-      <p>{props.comment.likes}</p>
+      <div onClick={likeComment}>
+        {liked ? (
+          <BsHandThumbsUpFill className="lb__icon" />
+        ) : (
+          <BsHandThumbsUp className="lb__icon" />
+        )}
+      </div>
+      <p className="lb__text">{props.comment.likes}</p>
     </>
   );
 }
