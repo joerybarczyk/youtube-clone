@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import LikeButton from "../LikeButton/LikeButton";
-import DislikeButton from "../DislikeButton/DislikeButton";
 import LikeDislike from "../LikeDislike/LikeDislike";
 import GetReplies from "../GetReplies/GetReplies";
 import AddReplyForm from "../AddReplyForm/AddReplyForm";

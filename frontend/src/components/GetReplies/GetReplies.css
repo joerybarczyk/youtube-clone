@@ -1,0 +1,9 @@
+.show-replies-btn{
+    font-size: small;
+  font-weight: bold;
+  background-color: transparent;
+  color: #3ea6ff;
+  padding: 0;
+  height: 1.5rem;
+  border: none;
+}

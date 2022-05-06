@@ -5,7 +5,7 @@ const ReplyCard = (props) => {
     return ( 
         <div className="custom-reply">
             <div className="flex">
-            <div className="profile-circle">M</div>
+            <div className="profile-circle">{userProfile}</div>
             <h5 className="custon-username">{props.reply.user.username}</h5>
             </div>
             
