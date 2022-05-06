@@ -1,23 +1,22 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./HomeVideoCard.css"
+import "./HomeVideoCard.css";
 
 const HomeVideoCard = (props) => {
   const navigate = useNavigate();
 
   const handleClick = function (event) {
     event.preventDefault();
-    navigate(`/watch?v=${props.video.videoId}`, { state: props.video });
+    navigate(`/watch?v=${props.video.videoId}`);
   };
 
   return (
     <Card bsPrefix="custom-card" onClick={handleClick}>
-      <Card.Img bsPrefix="custom-card-img"
-        
-        src={props.video.thumbnail.url}
-      />
-      <Card.Title bsPrefix="custom-card-title-h5">{props.video.title}</Card.Title>
+      <Card.Img bsPrefix="custom-card-img" src={props.video.thumbnail.url} />
+      <Card.Title bsPrefix="custom-card-title-h5">
+        {props.video.title}
+      </Card.Title>
       <Card.Text>{props.video.channelTitle}</Card.Text>
       <Card.Text>{props.video.publishTime}</Card.Text>
     </Card>
@@ -28,7 +27,6 @@ const HomeVideoCard = (props) => {
     //   <p>{props.video.channelTitle}</p>
     //   <p>{props.video.publishTime}</p>
     // </div>
-
   );
 };
 

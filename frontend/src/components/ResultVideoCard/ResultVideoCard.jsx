@@ -8,7 +8,7 @@ const ResultVideoCard = (props) => {
 
   const handleClick = function (e) {
     e.preventDefault();
-    navigate(`/watch?v=${props.video.videoId}`, { state: props.video });
+    navigate(`/watch?v=${props.video.videoId}`);
   };
 
   return (

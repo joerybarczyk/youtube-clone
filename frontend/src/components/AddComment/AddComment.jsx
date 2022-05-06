@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -7,6 +7,10 @@ const AddComment = (props) => {
   const [commentInput, setCommentInput] = useState("");
   const [user, token] = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCommentInput("");
+  }, [props.videoId]);
 
   async function addComment() {
     await axios
@@ -41,6 +45,7 @@ const AddComment = (props) => {
       <input
         type="text"
         placeholder="Add a comment..."
+        value={commentInput}
         onChange={(event) => setCommentInput(event.target.value)}
       />
     </form>

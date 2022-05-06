@@ -1,6 +1,7 @@
 import React from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import useRelatedVideos from "../../hooks/useRelatedVideos";
+import useVideoDetails from "../../hooks/useVideoDetails";
 import Video from "../../components/Video/Video";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
@@ -10,9 +11,8 @@ import CommentSection from "../../components/CommentSection/CommentSection";
 function IndividualVideoPage(props) {
   const [searchParams] = useSearchParams();
   const videoId = searchParams.get("v");
+  const [videoDetails] = useVideoDetails(videoId);
   const [relatedVideos] = useRelatedVideos(videoId);
-  const { state } = useLocation();
-  const videoDetails = state;
 
   return (
     <div>
