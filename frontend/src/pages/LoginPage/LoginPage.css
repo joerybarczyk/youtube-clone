@@ -1,3 +1,25 @@
 .error {
   color: red;
 }
+.container{
+  color: white;
+}
+.custom-input{
+  background: transparent;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline-style: none;
+  color: white;
+}
+.login-btn{
+  font-size: small;
+  font-weight: bold;
+  background-color: transparent;
+  color: #aaaaaa;
+  padding: 0;
+  height: 1.5rem;
+  border-style: solid;
+  border-color: #aaaaaa;
+
+}

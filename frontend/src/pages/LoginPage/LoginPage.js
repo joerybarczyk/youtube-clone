@@ -24,6 +24,7 @@ const LoginPage = () => {
         <label>
           Username:{" "}
           <input
+            className="custom-input"
             type="text"
             name="username"
             value={formData.username}
@@ -33,6 +34,7 @@ const LoginPage = () => {
         <label>
           Password:{" "}
           <input
+            className="custom-input"
             type="text"
             name="password"
             value={formData.password}
@@ -43,7 +45,7 @@ const LoginPage = () => {
           <p className="error">Login failed, incorrect credentials!</p>
         ) : null}
         <Link to="/register">Click to register!</Link>
-        <button>Login!</button>
+        <button className="login-btn">Login!</button>
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import "./RegisterPage.css"
 
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
@@ -22,6 +23,7 @@ const RegisterPage = () => {
         <label>
           Username:{" "}
           <input
+            className="custom-input"
             type="text"
             name="username"
             value={formData.username}
@@ -31,6 +33,7 @@ const RegisterPage = () => {
         <label>
           First Name:{" "}
           <input
+            className="custom-input"
             type="text"
             name="firstName"
             value={formData.firstName}
@@ -40,6 +43,7 @@ const RegisterPage = () => {
         <label>
           Last Name:{" "}
           <input
+            className="custom-input"
             type="text"
             name="lastName"
             value={formData.lastName}
@@ -49,6 +53,7 @@ const RegisterPage = () => {
         <label>
           Email:{" "}
           <input
+            className="custom-input"
             type="text"
             name="email"
             value={formData.email}
@@ -58,6 +63,7 @@ const RegisterPage = () => {
         <label>
           Password:{" "}
           <input
+            className="custom-input"
             type="text"
             name="password"
             value={formData.password}
@@ -68,7 +74,7 @@ const RegisterPage = () => {
           NOTE: Make this an uncommon password with characters, numbers, and
           special characters!
         </p>
-        <button>Register!</button>
+        <button className="register-btn">Register!</button>
       </form>
     </div>
   );
