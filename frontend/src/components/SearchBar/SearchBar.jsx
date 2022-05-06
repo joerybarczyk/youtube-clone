@@ -9,6 +9,7 @@ const SearchBar = () => {
 
   const handleSubmit = function (event) {
     event.preventDefault();
+    setSearchValue("");
     navigate(`/results?search_query=${searchValue}`);
     // <Navigate to={`/search?searchValue=${searchValue}`} />;
   };
@@ -20,6 +21,7 @@ const SearchBar = () => {
           className="searchbar__input"
           type="text"
           placeholder="Search"
+          value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         ></input>
         <button type="submit">
