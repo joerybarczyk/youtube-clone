@@ -21,11 +21,13 @@ const CommentCard = (props) => {
           Authorization: "Bearer " + token,
         },
       })
+      .then((response) => {
+        console.log(response.data);
+        setReplies(response.data);
+      })
       .catch((error) => {
         console.log(error.response);
       });
-    console.log(response.data);
-    setReplies(response.data);
   }
   let userProfile = props.comment.user.first_name.charAt(0);
 

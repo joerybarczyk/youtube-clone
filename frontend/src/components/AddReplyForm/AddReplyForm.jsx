@@ -11,17 +11,19 @@ function AddReplyForm(props) {
   const [user, token] = useAuth();
 
   async function addReply() {
-    await axios.post(
-      `http://127.0.0.1:8000/api/replies/?commentId=${props.commentId}`,
-      {
-        text: replyInput,
-      },
-      {
-        headers: {
-          Authorization: "Bearer " + token,
+    await axios
+      .post(
+        `http://127.0.0.1:8000/api/replies/?commentId=${props.commentId}`,
+        {
+          text: replyInput,
         },
-      }
-    );
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      )
+      .then((response) => props.getAllReplies());
   }
 
   function handleClick() {
@@ -35,7 +37,7 @@ function AddReplyForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     addReply();
-    props.getAllReplies();
+    // props.getAllReplies();
   }
 
   return (
@@ -45,8 +47,15 @@ function AddReplyForm(props) {
       </button>
       {buttonToggled && (
         <form onSubmit={handleSubmit}>
-          <input className="custom-input" type="text" placeholder="Add a reply" onChange={(e) => setReplyInput(e.target.value)} />
-          <button className="post-reply-btn" type="submit">Reply</button>
+          <input
+            className="custom-input"
+            type="text"
+            placeholder="Add a reply"
+            onChange={(e) => setReplyInput(e.target.value)}
+          />
+          <button className="post-reply-btn" type="submit">
+            Reply
+          </button>
         </form>
       )}
     </>

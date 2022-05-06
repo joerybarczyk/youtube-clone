@@ -1,15 +1,9 @@
 .custom-card {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 20px;
-  margin-top: 20px;
   border: 0px;
+  max-width: 250px;
   color: white;
 }
-.custom-card-img-top {
-  width: 350;
-  height: 400;
-}
-.custom-card-title-h5 {
-  width: 320px;
+.custom-card-img {
+  max-width: 250px;
+  height: auto;
 }
