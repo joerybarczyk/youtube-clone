@@ -29,10 +29,14 @@ const CommentCard = (props) => {
     console.log(response.data);
     setReplies(response.data);
   }
+  let userProfile = props.comment.user.first_name.charAt(0);
 
   return (
     <div className="comment__body">
-      <h4 className="comment__usrname">{props.comment.user.username}</h4>
+      <div className="flex">
+        <div className="profile-circle">{userProfile}</div>
+        <h4 className="comment__usrname">{props.comment.user.username}</h4>
+      </div>
       <p className="comment__text">{props.comment.text}</p>
       <div className="comment__footer">
         <LikeDislike
