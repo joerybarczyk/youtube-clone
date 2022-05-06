@@ -1,9 +1,11 @@
+import "./ReplyCard.css"
+
 const ReplyCard = (props) => {
     return ( 
-        <div>
-            <h2>TEST TEST TEST</h2>
-            <h4>{props.reply.user.username}</h4>
-            <p>{props.reply.text}</p>
+        <div className="custom-reply">
+            
+            <h5 className="custon-username">{props.reply.user.username}</h5>
+            <p className="custom-text">{props.reply.text}</p>
 
         </div>
      );

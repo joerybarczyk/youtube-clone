@@ -45,7 +45,7 @@ function AddReplyForm(props) {
       </button>
       {buttonToggled && (
         <form onSubmit={handleSubmit}>
-          <input type="text" onChange={(e) => setReplyInput(e.target.value)} />
+          <input className="custom-input" type="text" onChange={(e) => setReplyInput(e.target.value)} />
           <button type="submit">Reply</button>
         </form>
       )}

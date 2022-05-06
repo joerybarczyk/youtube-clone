@@ -25,12 +25,14 @@ const CommentCard = (props) => {
       .catch((error) => {
         console.log(error.response);
       });
-    console.log(response);
+    console.log(response.data);
     setReplies(response.data);
   }
 
   return (
+    
     <div className="comment__body">
+      <p>{props.comment.user.first_name}.</p>
       <h4 className="comment__usrname">{props.comment.user.username}</h4>
       <p className="comment__text">{props.comment.text}</p>
       <div className="comment__footer">

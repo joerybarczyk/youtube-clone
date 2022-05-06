@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import "./AddComment.css"
 
 const AddComment = (props) => {
   const [commentInput, setCommentInput] = useState("");
@@ -39,6 +40,7 @@ const AddComment = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="custom-input"
         type="text"
         placeholder="Add a comment..."
         onChange={(event) => setCommentInput(event.target.value)}
