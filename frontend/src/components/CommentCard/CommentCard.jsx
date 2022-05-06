@@ -29,7 +29,7 @@ const CommentCard = (props) => {
         console.log(error.response);
       });
   }
-  let userProfile = props.comment.user.first_name.charAt(0);
+  let userProfile = props.comment.user.first_name.charAt(0).toUpperCase();
 
   return (
     <div className="comment__body">

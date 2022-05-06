@@ -1,7 +1,7 @@
 import "./ReplyCard.css"
 
 const ReplyCard = (props) => {
-    let userProfile = props.reply.user.first_name.charAt(0);
+    let userProfile = props.reply.user.first_name.charAt(0).toUpperCase();
     return ( 
         <div className="custom-reply">
             <div className="flex">

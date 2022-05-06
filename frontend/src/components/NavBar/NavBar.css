@@ -33,3 +33,17 @@ li {
   cursor: pointer;
   font-size: 2rem;
 }
+.custom-btn{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  background-color: rgb(95, 145, 240);
+  border-radius: 50%;
+  font-size: large;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  margin-right: 5px;
+  font-weight: bold;
+
+}
