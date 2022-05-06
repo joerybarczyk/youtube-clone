@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import ReplyCard from "../ReplyCard/ReplyCard";
-import "./GetReplies.css"
+import "./GetReplies.css";
 
 const GetReplies = (props) => {
   const [user, token] = useAuth();
@@ -24,8 +24,9 @@ const GetReplies = (props) => {
   return (
     <div>
       {props.replies && props.replies.length !== 0 && (
-        
-        <button className="show-replies-btn" onClick={buttonClick}>{replyButtonLabel}</button>
+        <button className="show-replies-btn" onClick={buttonClick}>
+          {replyButtonLabel}
+        </button>
       )}
 
       {repliesToggled === true &&

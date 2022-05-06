@@ -6,7 +6,7 @@ import ResultVideoCard from "../../components/ResultVideoCard/ResultVideoCard";
 function SearchResultsPage(props) {
   const [searchParams] = useSearchParams();
   const searchTerm = searchParams.get("search_query");
-  const [searchResults] = useVideoSearchResults(searchTerm);
+  const [searchResults] = useVideoSearchResults(searchTerm, 10);
 
   return (
     <div>

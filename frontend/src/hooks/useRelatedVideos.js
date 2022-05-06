@@ -8,7 +8,7 @@ const useRelatedVideos = function (videoId) {
   useEffect(() => {
     async function getRelatedVideos() {
       let response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${KEY}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&type=video&key=${KEY}&maxResults=10`
       );
       const formattedResponse = formatRawResults(response.data.items);
       setRelatedVideos(formattedResponse);

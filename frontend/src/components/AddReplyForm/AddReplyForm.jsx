@@ -37,6 +37,7 @@ function AddReplyForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     addReply();
+    setReplyInput("");
     // props.getAllReplies();
   }
 
@@ -50,6 +51,7 @@ function AddReplyForm(props) {
           <input
             className="custom-input"
             type="text"
+            value={replyInput}
             placeholder="Add a reply"
             onChange={(e) => setReplyInput(e.target.value)}
           />

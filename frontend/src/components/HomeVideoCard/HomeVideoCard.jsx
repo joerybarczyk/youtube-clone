@@ -1,10 +1,12 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { publishedAtToHowLongSince } from "../../utils/dateformatting";
 import "./HomeVideoCard.css";
 
 const HomeVideoCard = (props) => {
   const navigate = useNavigate();
+  const timestamp = publishedAtToHowLongSince(props.video.publishTime);
 
   const handleClick = function (event) {
     event.preventDefault();
@@ -18,7 +20,7 @@ const HomeVideoCard = (props) => {
         {props.video.title}
       </Card.Title>
       <Card.Text>{props.video.channelTitle}</Card.Text>
-      <Card.Text>{props.video.publishTime}</Card.Text>
+      <Card.Text>{timestamp}</Card.Text>
     </Card>
 
     // <div className="home_card" onClick={handleClick}>
