@@ -7,7 +7,7 @@ li {
   font-size: 1.25rem;
 }
 
-.navBar {
+nav {
   background: #202020;
   color: white;
   border-style: solid;
@@ -33,7 +33,7 @@ li {
   cursor: pointer;
   font-size: 2rem;
 }
-.custom-btn{
+.custom-btn {
   height: 30px;
   width: 30px;
   line-height: 30px;
@@ -45,5 +45,4 @@ li {
   text-align: center;
   margin-right: 5px;
   font-weight: bold;
-
 }

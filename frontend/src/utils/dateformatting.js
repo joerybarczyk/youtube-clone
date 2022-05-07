@@ -32,10 +32,9 @@ function publishedAtToHowLongSince(timestamp) {
   const date = new Date();
   const currentDate = {
     year: date.getUTCFullYear(),
-    month: date.getUTCMonth(),
+    month: date.getUTCMonth() + 1, //UTC months range from 0-11
     day: date.getUTCDay(),
   };
-  console.log(currentDate);
 
   let howLong;
   if (currentDate.year > dateObj.year) {
@@ -53,6 +52,6 @@ function publishedAtToHowLongSince(timestamp) {
   return howLong;
 }
 
-publishedAtToHowLongSince("2020-12-31T09:12:39Z");
+publishedAtToHowLongSince("2022-04-03T13:40:42Z");
 
 export { publishedAtToMDY, publishedAtToHowLongSince };

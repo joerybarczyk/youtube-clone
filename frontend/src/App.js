@@ -14,7 +14,7 @@ import Navbar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePageYouTube />} />
@@ -23,8 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }
 
