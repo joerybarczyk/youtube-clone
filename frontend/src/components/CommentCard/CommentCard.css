@@ -14,13 +14,14 @@
   font-size: small;
   color: white;
   margin-left: 35px;
+  width: 100%;
 }
 
 .comment__footer {
   display: flex;
   gap: 10px;
 }
-.profile-circle{
+.profile-circle {
   height: 30px;
   width: 30px;
   line-height: 30px;
@@ -33,7 +34,7 @@
   margin-right: 5px;
   font-weight: bold;
 }
-.flex{
+.flex {
   display: flex;
   align-items: baseline;
 }

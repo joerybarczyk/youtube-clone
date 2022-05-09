@@ -1,12 +1,17 @@
+// General imports
 import React from "react";
-import { useSearchParams, useLocation } from "react-router-dom";
-import useRelatedVideos from "../../hooks/useRelatedVideos";
-import useVideoDetails from "../../hooks/useVideoDetails";
+
+// Component imports
 import Video from "../../components/Video/Video";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
-import { Row, Col, Container } from "react-bootstrap";
 import CommentSection from "../../components/CommentSection/CommentSection";
+import { Row, Col, Container } from "react-bootstrap";
+
+// Hook imports
+import { useSearchParams } from "react-router-dom";
+import useRelatedVideos from "../../hooks/useRelatedVideos";
+import useVideoDetails from "../../hooks/useVideoDetails";
 
 function IndividualVideoPage(props) {
   const [searchParams] = useSearchParams();
@@ -15,7 +20,7 @@ function IndividualVideoPage(props) {
   const [relatedVideos] = useRelatedVideos(videoId);
 
   return (
-    <div>
+    <main>
       <Container>
         <Row>
           <Col xl={7}>
@@ -34,7 +39,7 @@ function IndividualVideoPage(props) {
           </Col>
         </Row>
       </Container>
-    </div>
+    </main>
   );
 }
 

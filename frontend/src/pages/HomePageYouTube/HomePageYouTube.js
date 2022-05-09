@@ -1,55 +1,17 @@
+// General imports
 import React from "react";
-import useVideoSearchResults from "../../hooks/useVideoSearchResults";
-import HomeVideoCard from "../../components/HomeVideoCard/HomeVideoCard";
-import { Container, Row, Col } from "react-bootstrap";
 import "./HomePageYouTube.css";
 
-const HomePageYouTube = () => {
-  const [dogSearchResults] = useVideoSearchResults("dogs");
-  const [catSearchResults] = useVideoSearchResults("cats");
-  const [animalSearchResults] = useVideoSearchResults("animal");
+// Component imports
+import VideoTopicRow from "../../components/VideoTopicRow/VideoTopicRow";
 
+const HomePageYouTube = () => {
   return (
-    <div className="homepage">
-      <Container>
-        <h5>DOGS</h5>
-        {dogSearchResults != null && (
-          <Row>
-            {dogSearchResults.map((video) => {
-              return (
-                <Col>
-                  <HomeVideoCard key={video.id} video={video} />
-                </Col>
-              );
-            })}
-          </Row>
-        )}
-        <h5>CATS</h5>
-        {catSearchResults != null && (
-          <Row>
-            {catSearchResults.map((video) => {
-              return (
-                <Col>
-                  <HomeVideoCard key={video.id} video={video} />
-                </Col>
-              );
-            })}
-          </Row>
-        )}
-        <h5>ANIMALS</h5>
-        {animalSearchResults != null && (
-          <Row>
-            {animalSearchResults.map((video) => {
-              return (
-                <Col>
-                  <HomeVideoCard key={video.id} video={video} />
-                </Col>
-              );
-            })}
-          </Row>
-        )}
-      </Container>
-    </div>
+    <main className="homepage">
+      <VideoTopicRow heading="Dogs" searchQuery="dogs" />
+      <VideoTopicRow heading="Cats" searchQuery="cats" />
+      <VideoTopicRow heading="Animals" searchQuery="animals" />
+    </main>
   );
 };
 

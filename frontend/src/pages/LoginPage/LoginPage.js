@@ -1,8 +1,15 @@
+// General imports
 import React, { useContext, useEffect } from "react";
-import AuthContext from "../../context/AuthContext";
-import useCustomForm from "../../hooks/useCustomForm";
-import { Link } from "react-router-dom";
 import "./LoginPage.css";
+
+// Component imports
+import { Link } from "react-router-dom";
+
+// Hook imports
+import useCustomForm from "../../hooks/useCustomForm";
+
+// Context imports
+import AuthContext from "../../context/AuthContext";
 
 const LoginPage = () => {
   const { loginUser, isServerError } = useContext(AuthContext);

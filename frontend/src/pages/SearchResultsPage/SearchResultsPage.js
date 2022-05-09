@@ -1,7 +1,12 @@
+// General imports
 import React from "react";
+
+// Component imports
+import ResultVideoCard from "../../components/ResultVideoCard/ResultVideoCard";
+
+// Hook imports
 import { useSearchParams } from "react-router-dom";
 import useVideoSearchResults from "../../hooks/useVideoSearchResults";
-import ResultVideoCard from "../../components/ResultVideoCard/ResultVideoCard";
 
 function SearchResultsPage(props) {
   const [searchParams] = useSearchParams();
